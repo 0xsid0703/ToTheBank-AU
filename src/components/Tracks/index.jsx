@@ -100,7 +100,7 @@ const Tracks = () => {
             </div>
             { events.length > 0 && loading &&
                 <div className='w-full overflow-x-scroll' style={{maxWidth: `${pWidth}px`}}>
-                    <div className='flex flex-row border-d border-t border-grey-2'>
+                    <div className='flex flex-row border-d border-t border-grey-2' key={0}>
                         <div className='track-header' style={{width: `${pWidth/6}px`}}>Track</div>
                         {
                             Array.from ({length: maxEvents}).map((_, idx) => (

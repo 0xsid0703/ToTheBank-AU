@@ -17,7 +17,6 @@ import { eventsContext } from "./contexts/eventsContext";
 import { clockContext } from "./contexts/clockContext";
 
 function App() {
-  console.log('Hello I am inside app')
   const [market, setMarket] = useState ('')
   const [events, setEvents] = useState ([])
   const clock = useRef (new Date().getTime())
@@ -46,7 +45,7 @@ function App() {
   return (
     <eventsContext.Provider value={eventsValue}>
       <marketContext.Provider value={marketValue}>
-        <clockContext.Provider value={"5th May 2024"}>
+        <clockContext.Provider value={clockValue}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/horse/au/:id" element={<HorseProfile />} />
